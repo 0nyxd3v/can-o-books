@@ -8,7 +8,8 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import axios from 'axios';
+import Profile from './About';
+// import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,19 +19,10 @@ class App extends React.Component {
     }
   }
 
-  getBookData = async() => {
-    try {
-      let bookData = await axios.get(`${process.env.REACT_APP_SERVER}/books`);
-      this.setState({
-        books: bookData.data,
-      })
-    } catch (error) {
-      console.log('An error has occured: ', error.response);
-    }
-  }
 
 
   render() {
+    
     return (
       <>
         <Router>
@@ -41,7 +33,7 @@ class App extends React.Component {
               element={<BestBooks />}
             >
             </Route>
-            {/* PLACEHOLDER: add a route with a path of '/about' that renders the `About` component */}
+              <Profile />
           </Routes>
           <Footer />
         </Router>

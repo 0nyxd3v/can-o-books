@@ -12,11 +12,8 @@ import Profile from './About';
 // import axios from 'axios';
 
 class App extends React.Component {
- 
 
-
-  render() {
-    
+  render() { 
     return (
       <>
         <Router>
@@ -28,7 +25,7 @@ class App extends React.Component {
             >
             </Route>
               <Route path="/profile"
-              element={<Profile/>} />
+                </Route>
           </Routes>
           <Footer />
         </Router>

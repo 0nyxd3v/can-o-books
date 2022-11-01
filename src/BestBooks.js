@@ -8,7 +8,6 @@ class BestBooks extends React.Component {
     super(props);
     this.state = {
       books: [],
-      src: '',
     }
   }
 
@@ -19,7 +18,6 @@ class BestBooks extends React.Component {
       let bookData = await axios.get(`${process.env.REACT_APP_SERVER}/books`);
       this.setState({
         books: bookData.data,
-        src: ''
       })
     } catch (error) {
       console.log('An error has occured: ', error.response);

@@ -12,13 +12,7 @@ import Profile from './About';
 // import axios from 'axios';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: [],
-    }
-  }
-
+ 
 
 
   render() {
@@ -33,7 +27,8 @@ class App extends React.Component {
               element={<BestBooks />}
             >
             </Route>
-              <Profile />
+              <Route path="/profile"
+              element={<Profile/>} />
           </Routes>
           <Footer />
         </Router>

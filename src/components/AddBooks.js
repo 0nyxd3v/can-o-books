@@ -1,7 +1,7 @@
 // import axios from "axios";
 import React from "react";
 // import axios from 'axios';
-// import { Button, Container, Form } from 'react-bootstrap';
+import { Button, Container, Form } from 'react-bootstrap';
 
 
 class AddBooks extends React.Component {
@@ -11,7 +11,7 @@ class AddBooks extends React.Component {
   render() {
     return (
       <>
-        {/* <main>
+        <main>
         <Container className="container1">
             <Form>
               <Form.Group controlId="title">
@@ -28,7 +28,7 @@ class AddBooks extends React.Component {
               <Button type="submit">Add Books</Button>
             </Form>
           </Container>
-        </main> */}
+        </main>
       </>
     )
   }

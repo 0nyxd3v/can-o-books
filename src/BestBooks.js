@@ -1,9 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { Carousel, Container, Image } from 'react-bootstrap';
-import { Button, Form } from 'react-bootstrap';
-
-
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -82,27 +79,6 @@ class BestBooks extends React.Component {
         ) : (
           <h3>No Books Found :(</h3>
         )}
-
-
-
-        <main>
-          <Container className="container1">
-            <Form>
-              <Form.Group controlId="title">
-                <Form.Label>Title</Form.Label>
-                <Form.Control type="text" />
-              </Form.Group>
-              <Form.Group controlId="description">
-                <Form.Label>Description</Form.Label>
-                <Form.Control type="text" />
-              </Form.Group>
-              <Form.Group controlId="status">
-                <Form.Check type="checkbox" label="status" />
-              </Form.Group>
-              <Button type="submit">Add Books</Button>
-            </Form>
-          </Container>
-        </main>
 
       </>
     )

@@ -71,7 +71,7 @@ Actual time needed to complete: 2hours
 - How often will you take breaks?
   - Whenever we need to, if necessary
 - What is your plan if you start to fall behind?
-  - Communicate concerns to each other and seek outside input. 
+  - Communicate concerns to each other and seek outside input.
 
 ### Cooperative
 

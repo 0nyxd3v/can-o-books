@@ -60,12 +60,6 @@ class BestBooks extends React.Component {
           <h3>No Books Found :(</h3>
         )}
 
-        {/* <Container>
-          <Carousel>
-            {bookItems}
-          </Carousel>
-        </Container> */}
-
       </>
     )
   }

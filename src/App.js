@@ -8,7 +8,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Profile from './About';
+import About from './About';
 // import axios from 'axios';
 
 class App extends React.Component {
@@ -24,8 +24,8 @@ class App extends React.Component {
               element={<BestBooks />}
             >
             </Route>
-              <Route path="/profile"
-              element ={<Profile/>}
+              <Route path="/about"
+              element ={<About/>}
               >
 
                 </Route>

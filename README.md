@@ -51,6 +51,17 @@ Finish time: 7:35pm PST
 
 Actual time needed to complete: 2hours
 
+Name of feature: Button
+
+Estimate of time needed to complete: 20 mins
+
+Start time: 5:50pm PST
+
+Finish time: 7:57pm PST
+
+Actual time needed to complete: 7 mins
+
+
 ## Credit and Collaborations
 
 - Image Credits

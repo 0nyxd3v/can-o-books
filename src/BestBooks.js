@@ -8,9 +8,7 @@ class BestBooks extends React.Component {
     super(props);
     this.state = {
       books: [],
-      src: '',
-      modalState: false,
-
+      modalState: false
     }
   }
 
@@ -21,7 +19,6 @@ class BestBooks extends React.Component {
       let bookData = await axios.get(`${process.env.REACT_APP_SERVER}/books`);
       this.setState({
         books: bookData.data,
-        src: '',
       })
     } catch (error) {
       console.log('An error has occured: ', error.response);
@@ -30,12 +27,12 @@ class BestBooks extends React.Component {
 
 
 
-  deleteBooks = async (id) => {
+  deleteBooks = async (bookID) => {
     try {
-      let url =`${process.env.REACT_APP_SERVER}/books/${id}`;
+      let url =`${process.env.REACT_APP_SERVER}/books/${bookID}`;
       await axios.delete(url);
 
-      let updatedBooks = this.state.books.filter(book => book._id !== id);
+      let updatedBooks = this.state.books.filter(book => book._id !== bookID);
 
       this.setState({
         books: updatedBooks
@@ -92,8 +89,11 @@ class BestBooks extends React.Component {
         <Carousel.Caption>
           <h3>{book.title}</h3>
           <p>{book.description}</p>
-        </Carousel.Caption>
-    </Carousel.Item>
+          <Button onClick= {()=>{this.deleteBooks(book._id)}}>Delete Book</Button>
+        </Carousel.Caption>  
+      </Carousel.Item>
+      
+
     )
 
     return (

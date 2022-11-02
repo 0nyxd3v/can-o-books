@@ -21,7 +21,7 @@ class About extends Component {
         <section className='about-sect'>
           <div className='about-div'>
             <h2>Monica Ramirez</h2>
-            <p> U+1F44B Hello, hello, hello! U+1F44B I'm Monica Ramirez, I'm new to the tech field. Coding has been a rollercoaster of ups and downs, but I'm having the best time of my life. Slowly creeping up to wanting to work on backend. Coding challenges me and pushes me, I love it. If I'm not in front of the screen, you can find me at the gym lifting weights or doing mom things. Thanks for checking out our web app.
+            <p>  Hello, hello, hello! I'm Monica Ramirez, I'm new to the tech field. Coding has been a rollercoaster of ups and downs, but I'm having the best time of my life. Slowly creeping up to wanting to work on backend. Coding challenges me and pushes me, I love it. If I'm not in front of the screen, you can find me at the gym lifting weights or doing mom things. Thanks for checking out our web app.
             </p>
           </div>
         </section>

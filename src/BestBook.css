@@ -13,12 +13,9 @@ div.addButtonDiv {
   justify-content: right;
 }
 
-button.btn.btn-primary {
-  transform: scale(1.01, 1.01);
-  box-shadow: 0 0 50px black;
-}
-
-button.btn.btn-primary {
+button.btn.btn-primary:hover {
+  /* transform: scale(1.01, 1.01); */
+  box-shadow: 0 0 1.5rem black; 
   transform: scale(0.8, 0.8);
 }
 

@@ -54,7 +54,7 @@ class BestBooks extends React.Component {
       let newCreatedBook = await axios.post(url, newBookObj);
 
       this.setState({
-        books: [...this.props.books, newCreatedBook.data]
+        book: [...this.state.books, newCreatedBook.data]
       })
     } catch (error) {
       console.log(error.message)

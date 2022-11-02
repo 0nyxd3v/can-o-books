@@ -8,9 +8,9 @@ class About extends Component {
     /* TODO: render information about the developers */
     return (
       <>
-        <section className='about-sect'>
+        <section className='about-sect top'>
           <div className='about-div'>
-            <h1>About Page</h1>
+            <h1 className='about-page-h1'>About Page</h1>
           </div>
           <div className='about-div'>
             <h2>Nerissa Leynes</h2>

@@ -19,3 +19,13 @@ button.btn.btn-primary:hover {
   transform: scale(0.8, 0.8);
 }
 
+/* nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+  bottom: 0%;
+  position: absolute;
+} */
+
+navbar-expand-lg.navbar-dark.bg-dark {
+  bottom: 0%;
+  position: absolute;
+  margin-top: 150px;
+}

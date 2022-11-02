@@ -7,15 +7,13 @@ h2{
   text-align: center;
 }
 
-.about-h2 {
-
-  padding: 50px;
-}
-
 .about-div {
   padding: 50px;
   display: flex;
   flex-direction: column;
+  width: 55%;
+  background-color: bisque;
+
 }
 
 .about-sect {
@@ -29,4 +27,41 @@ h2{
 .modalSect {
   padding: 25px;
   margin-left: 10px;
+}
+
+p {
+  margin-top: 20px;
+}
+
+.about-page-h1 {
+  margin: auto;
+}
+
+.top {
+  margin-top: 20px;
+}
+
+.footer-style {
+  display: flex;
+  justify-content: center;
+  margin-left: 500px;
+}
+
+.nav-container {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #e1d4dd;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

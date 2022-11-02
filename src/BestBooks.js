@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import BookFormModal from './components/BookFormModal'
 import { Button, Carousel, Container, Image } from 'react-bootstrap';
+import './BestBook.css';
 
 class BestBooks extends React.Component {
   constructor(props) {

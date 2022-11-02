@@ -1,0 +1,9 @@
+button.btn.btn-primary{
+  background-color:rgba(30, 147, 182, 0.986);
+  border-radius: 5vmax;
+  padding: 1.1vmax;
+  font-size:1.9vmax;
+  margin:1.8%;
+  border: none;
+}
+

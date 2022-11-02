@@ -19,11 +19,10 @@ For this Lab, we will use Mongoose and MongoDB to create a NoSQL database. We wi
 - Mongoose
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+10/31/2022 8:00pm EST - The application is now fully fuctional and can now connect to the database. It is now getting Book items.
 
-10/31/2022 - Application now is rendering the book items
+11/01/2022 8:15pm EST - The application can now add data into the database (Post functionality)
 
 ## Estimates
 
@@ -61,6 +60,17 @@ Finish time: 7:57pm PST
 
 Actual time needed to complete: 7 mins
 
+### Post Functionality
+
+Name of feature: *Create: As a user, I'd like to add a new book to the shelf, so that I can update the list with my own recommendations*
+
+Estimate of time needed to complete: 30min - 1 hour
+
+Start time: 7:15pm EST
+
+Finish time: 8:15pm EST
+
+Actual time needed to complete: 1 hour
 
 ## Credit and Collaborations
 

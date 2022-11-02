@@ -102,7 +102,7 @@ class BestBooks extends React.Component {
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
         {this.state.books.length ? (
-          <Container>
+          <Container className="carousel-cont">
             <Carousel>
               {bookItems}
             </Carousel>

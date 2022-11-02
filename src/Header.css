@@ -1,0 +1,28 @@
+span.Header.navbar-brand{
+  font-size:1.8vmax;
+  padding: 0.2%;
+  margin-left: 1.5%;
+}
+div.nav-item{
+  display: flex;
+  flex: 30%;
+  color:white;
+
+  align-items: center;
+  justify-content: right;
+}
+
+a.nav-link{
+  font-size: 1.3vmax;
+  padding: 0.5vmax;
+  margin-right: 2.5%;
+  background-color: none;
+  border-radius: 5vmax;
+}
+a.nav-link:hover{
+  color:rgb(12, 12, 11);
+  background-color: rgba(48, 245, 248, 0.677) !important;
+  border-radius: 5vmax;
+  padding:0.8vmax;
+  
+}

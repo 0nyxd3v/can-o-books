@@ -1,12 +1,14 @@
 import React from 'react';
 import axios from 'axios';
-import { Carousel, Container, Image, Button } from 'react-bootstrap';
+import BookFormModal from './components/BookFormModal'
+import { Button, Carousel, Container, Image } from 'react-bootstrap';
 
 class BestBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      books: [],
+      modalState: false
     }
   }
 
@@ -42,7 +44,34 @@ class BestBooks extends React.Component {
 
   }
 
+  handleButtonClick = () => {
+    this.props.handleOpenModal(this.props)
+  }
 
+  postBooks = async (newBookObj) => {
+    try {
+      let url = `${process.env.REACT_APP_SERVER}/books`;
+      let newCreatedBook = await axios.post(url, newBookObj);
+
+      this.setState({
+        books: [...this.props.books, newCreatedBook.data]
+      })
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
+  handleOpenModal = () => {
+    this.setState({
+      modalState: true,
+    })
+  }
+
+  handleClosedModal = () => {
+    this.setState({
+      modalState: false,
+    })
+  }
 
   // REACT LIFE CYCLE METHOD
   componentDidMount() {
@@ -80,6 +109,16 @@ class BestBooks extends React.Component {
         ) : (
           <h3>No Books Found :(</h3>
         )}
+
+        <div>
+          <Button onClick={this.handleOpenModal}>Add Book</Button>
+        </div>
+        
+        <BookFormModal 
+          show={this.state.modalState}
+          close={this.handleClosedModal}
+          postBooks={this.postBooks}
+        />
 
       </>
     )

@@ -111,7 +111,7 @@ class BestBooks extends React.Component {
           <h3>No Books Found :(</h3>
         )}
 
-        <div>
+        <div className= "addButtonDiv">
           <Button onClick={this.handleOpenModal}>Add Book</Button>
         </div>
         

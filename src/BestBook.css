@@ -1,15 +1,24 @@
-button.btn.btn-primary{
-  background-color:rgba(30, 147, 182, 0.986);
+button.btn.btn-primary {
+  background-color: rgba(30, 147, 182, 0.986);
   border-radius: 5vmax;
   padding: 0.8vmax;
-  font-size:1.1vmax;
-  margin:1%;
+  font-size: 1.1vmax;
+  margin: 1%;
   border: none;
 }
 
-div.addButtonDiv{
+div.addButtonDiv {
   display: flex;
- flex:1;
- justify-content: right;
- }
+  flex: 1;
+  justify-content: right;
+}
+
+button.btn.btn-primary {
+  transform: scale(1.01, 1.01);
+  box-shadow: 0 0 50px black;
+}
+
+button.btn.btn-primary {
+  transform: scale(0.8, 0.8);
+}
 

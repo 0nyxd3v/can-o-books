@@ -1,9 +1,43 @@
-button.btn.btn-primary{
+button.btn.btn-primary {
   background-color:rgba(30, 147, 182, 0.986);
   border-radius: 5vmax;
   padding: 1.1vmax;
   font-size:1.9vmax;
   margin:1.8%;
   border: none;
+}
+
+div.addButtonDiv{
+  display: flex;
+ flex:1;
+ justify-content: right;
+ 
+ }
+
+button.btn.btn-primary {
+  transform: scale(1.01,1.01);
+  box-shadow: 0 0 50px black;
+}
+
+button.btn.btn-primary {
+  transform: scale(0.8,0.8);
+}
+
+.about-h2 {
+  
+  padding: 50px;
+}
+
+.about-div {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-sect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 

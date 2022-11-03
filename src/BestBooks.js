@@ -98,10 +98,10 @@ class BestBooks extends React.Component {
 
 // *modal to update 
 
-handleOpenUpModal = (book) => {
+handleOpenUpModal = (bookObj) => {
   this.setState({
     updateModalState: true,
-    updatedBook:book
+    updatedBook:bookObj
   })
 }
 

@@ -72,6 +72,17 @@ Finish time: 8:15pm EST
 
 Actual time needed to complete: 1 hour
 
+Name of feature: Form Modal 
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 2:15pm EST
+
+Finish time: 5:15pm EST
+
+Actual time needed to complete: 3 hour
+
+
 ## Credit and Collaborations
 
 - Image Credits

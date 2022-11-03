@@ -1,6 +1,4 @@
-// import axios from "axios";
 import React from "react";
-// import axios from 'axios';
 import { Button, Form, Modal} from 'react-bootstrap';
 
 
@@ -18,12 +16,11 @@ class AddBooks extends React.Component {
     
     this.props.postBooks(newBook)
   }
-
-  
+ 
   render() {
     return (
       <>
-        <main>
+        {/* <main> */}
         <Modal className="modalSect" show={this.props.show} onHide={this.props.close}>
           <Modal.Header closeButton>
             <Modal.Title>Add New Books</Modal.Title>
@@ -43,7 +40,7 @@ class AddBooks extends React.Component {
                 <Button onSubmit={this.props.postBooks} type="submit">Add Books</Button>
               </Form>
           </Modal>
-        </main>
+        {/* </main> */}
       </>
     )
   }

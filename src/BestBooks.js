@@ -1,19 +1,23 @@
 import React from 'react';
 import axios from 'axios';
 import BookFormModal from './components/BookFormModal'
+import UpdateModal from './components/UpdateModal'
 import { Button, Carousel, Container, Image } from 'react-bootstrap';
 import './BestBook.css';
+// import { useLoaderData } from 'react-router-dom';
 
 class BestBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       books: [],
-      modalState: false
+      updatedBook:null,
+      modalState: false,
+      updateModalState:false
     }
   }
 
-  /* TODO: Make a GET request to your API to fetch all the books from the database  */
+// * ASYNC FUNCTIONS*
 
   getBookData = async() => {
     try {
@@ -25,8 +29,6 @@ class BestBooks extends React.Component {
       console.log('An error has occured: ', error.response);
     }
   }
-
-
 
   deleteBooks = async (bookID) => {
     try {
@@ -45,10 +47,6 @@ class BestBooks extends React.Component {
 
   }
 
-  handleButtonClick = () => {
-    this.props.handleOpenModal(this.props)
-  }
-
   postBooks = async (newBookObj) => {
     try {
       let url = `${process.env.REACT_APP_SERVER}/books`;
@@ -60,8 +58,32 @@ class BestBooks extends React.Component {
     } catch (error) {
       console.log(error.message)
     }
-  }
+  } 
 
+ updateBook = async (bookToUpdate) => { 
+  console.log(bookToUpdate); 
+  try {
+  
+    let url =`${process.env.REACT_APP_SERVER}/books/${bookToUpdate._id}`;
+    let updatedBook = await axios.put(url, bookToUpdate);
+
+    let updatedBookArr= this.state.books.map(existingBook =>{
+      return existingBook._id === bookToUpdate._id ? updatedBook.data : existingBook
+    })
+
+    this.setState({
+      books: updatedBookArr
+    })
+  }catch(error){
+   console.log(error.message)
+  }
+  }
+  
+  // *ONCLICK/SUBMIT FUNCTIONS
+  handleButtonClick = () => {
+    this.props.handleOpenModal(this.props)
+  }
+// modal to add 
   handleOpenModal = () => {
     this.setState({
       modalState: true,
@@ -73,6 +95,21 @@ class BestBooks extends React.Component {
       modalState: false,
     })
   }
+
+// *modal to update 
+
+handleOpenUpModal = (book) => {
+  this.setState({
+    updateModalState: true,
+    updatedBook:book
+  })
+}
+
+handleCloseUpModal = () => {
+  this.setState({
+   updateModalState: false,
+  })
+}
 
   // REACT LIFE CYCLE METHOD
   componentDidMount() {
@@ -91,6 +128,7 @@ class BestBooks extends React.Component {
           <h3>{book.title}</h3>
           <p>{book.description}</p>
           <Button onClick= {()=>{this.deleteBooks(book._id)}}>Delete Book</Button>
+          <Button className="updateButton" onClick= {()=> this.handleOpenUpModal(book)}>Update Book</Button>
         </Carousel.Caption>  
       </Carousel.Item>
       
@@ -101,7 +139,7 @@ class BestBooks extends React.Component {
       <>
         <h2>My Essential Lifelong Learning &amp; Formation Shelf</h2>
 
-        {this.state.books.length ? (
+        {this.state.books.length > 0 ? (
           <Container className="carousel-cont">
             <Carousel>
               {bookItems}
@@ -120,7 +158,15 @@ class BestBooks extends React.Component {
           close={this.handleClosedModal}
           postBooks={this.postBooks}
         />
-
+        { this.state.updatedBook &&
+        <UpdateModal
+        show={this.state.updateModalState}
+        close = {this.handleCloseUpModal}
+        updateBook={this.updateBook}
+        books = {this.state.books}
+        updatedBook ={this.state.updatedBook}
+        />
+        }
       </>
     )
   }
